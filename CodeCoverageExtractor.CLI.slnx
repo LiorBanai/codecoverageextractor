@@ -1,3 +1,3 @@
 <Solution>
-  <Project Path="src/Codecoverageextractor.CLI.csproj" />
+  <Project Path="src/Codecoverageextractor.CLI.csproj" DisplayName="CodeCoverageExtractor.CLI" />
 </Solution>
