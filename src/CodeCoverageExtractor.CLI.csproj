@@ -15,7 +15,7 @@
 		<AssemblyName>CodeCoverageExtractor.CLI</AssemblyName>
 		<PackageId>CodeCoverageExtractor.CLI</PackageId>
 		<Product>CodeCoverageExtractor.CLI</Product>
-		<VersionPrefix>0.2.0</VersionPrefix>
+		<VersionPrefix>0.2.2</VersionPrefix>
 		<VersionSuffix></VersionSuffix>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<Description>cli tool for extracting code coverage from Cobertura xml reports</Description>
