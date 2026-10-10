@@ -70,11 +70,15 @@ jobs:
         uses: actions/download-artifact@v8.0.1
         with:
           name: artifactory_Release
+      - name: 'Setup NuGet'
+        uses: NuGet/setup-nuget@v2
+        with:
+          nuget-version: '6.13.x'
       - name: 'Dotnet NuGet Push'
         run: |
           Get-ChildItem ./ -Recurse -Filter *.nupkg |
           Where-Object { !$_.Name.Contains('preview') } |
-          ForEach-Object { dotnet nuget push $_ --source https://api.nuget.org/v3/index.json --skip-duplicate }
+          ForEach-Object { nuget push $_.FullName -Source https://api.nuget.org/v3/index.json -SkipDuplicate -NonInteractive }
         shell: pwsh
 concurrency: 
   group: ${{ github.ref }}
